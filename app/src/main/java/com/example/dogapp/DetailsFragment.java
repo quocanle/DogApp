@@ -2,9 +2,12 @@ package com.example.dogapp;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -26,6 +29,7 @@ public class DetailsFragment extends Fragment {
         if (getArguments() != null) {
             dogBreed = (DogBreed) getArguments().getSerializable("dog");
         }
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -34,10 +38,21 @@ public class DetailsFragment extends Fragment {
         binding = FragmentDetailsBinding.inflate(inflater, container, false);
         View viewRoot = binding.getRoot();
         Picasso.get().load(dogBreed.getUrl()).into(binding.ivDog);
-        binding.tvOrigin.setText(dogBreed.getOrigin());
+//        binding.tvOrigin.setText(dogBreed.getOrigin());
         binding.tvHeight.setText(dogBreed.getHeight().getMetric());
         binding.tvWeight.setText(dogBreed.getWeight().getMetric());
         binding.setDog(dogBreed);
         return viewRoot;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_back, menu);
+         menu.findItem(R.id.app_bar_back).setOnMenuItemClickListener(item -> {
+//            getActivity().onBackPressed();
+            getParentFragmentManager().popBackStack();
+            return true;
+        });
     }
 }

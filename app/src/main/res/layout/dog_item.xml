@@ -17,11 +17,12 @@
     android:layout_marginLeft="6dp">
 
     <LinearLayout
-        android:id="@+id/ll_element"
+        android:id="@+id/ll_dog_less_information"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:visibility="visible">
 
         <ImageView
             android:id="@+id/iv_dog"
@@ -38,8 +39,9 @@
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:text="@{dog.name}"
+                android:hint="Name"
+                android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 ></TextView>
             <ImageView
@@ -57,9 +59,146 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{dog.bred_for}"
+            android:hint="Breed for"
             android:textSize="15sp"
             android:layout_gravity="center_horizontal"
             ></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_dog_full_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint="Name no data"
+            android:text="@{dog.name}"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Breed for:"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:hint="breed for no data"
+                android:text="@{dog.bred_for}"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Life span:"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:hint="life span no data"
+                android:text="@{dog.life_span}"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Origin:"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/tv_origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:hint="origin no data"
+                android:text="@{dog.origin}"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Temperament:"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:hint="temp no data"
+                android:text="@{dog.temperament}"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Height:"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:hint="height no data"
+                android:text=""
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Weight:"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/tv_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:hint="weight no data"
+                android:text=""
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

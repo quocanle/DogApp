@@ -23,8 +23,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="24sp"
-            android:hint="textName"
+            android:hint="Name no data"
             android:text="@{dog.name}"
+            android:textStyle="bold"
             android:layout_marginTop="8dp"
             android:layout_gravity="center_horizontal"/>
 
@@ -42,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:hint="text"
+                android:hint="breed for no data"
                 android:text="@{dog.bred_for}"
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
@@ -61,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:hint="text"
+                android:hint="life span no data"
                 android:text="@{dog.life_span}"
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
@@ -81,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:hint="text"
+                android:hint="origin no data"
                 android:text="@{dog.origin}"
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
@@ -100,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:hint="text"
+                android:hint="temperament no data"
                 android:text="@{dog.temperament}"
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
@@ -120,8 +121,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:hint="text"
-                android:text="height"
+                android:hint="height no data"
+                android:text=""
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
 
@@ -140,8 +141,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:hint="text"
-                android:text="weight"
+                android:hint="weight no data"
+                android:text=""
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
 
